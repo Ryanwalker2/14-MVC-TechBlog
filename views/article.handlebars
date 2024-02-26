@@ -1,0 +1,16 @@
+{{#if loggedIn}}
+<section class="article">
+    <div class="painting-details">
+    <h3>{{article.title}}</h3>
+    <p>By: {{article.artist}} on {{ format_date article.creationDate}}</p>
+    <p>{{article.description}}</p>
+    </div>
+    <div class="comments">
+    {{#each comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+    </div>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
