@@ -27,14 +27,6 @@ Article.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        comment_id: {
-            type: DataTypes.STRING,
-            references: {
-                model: 'comment',
-                key: 'id',
-            },
-        },
-
     },
     {
         sequelize,
